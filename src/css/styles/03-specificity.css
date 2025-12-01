@@ -3,10 +3,25 @@ body {
   color: green;
 }
 
-p {
-  color: red;
-}
-
 .wrapper {
   color: blue;
+}
+
+#coding {
+  color: blue;
+}
+
+.a.b.c.d.e.f.g.h.i.j.k.l {
+  color: green;
+}
+
+body .wrapper p.note {
+  color: red;
+}
+body p.note.like {
+  color: purple;
+}
+
+.wrapper p {
+  color: skyblue !important;
 }
