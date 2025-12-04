@@ -17,7 +17,14 @@
     <h1>아바타 UI</h1>
     <h2>아바타 레이아웃</h2>
     <ul class="avatar-list">
-      <li class="avatar-item"></li>
+      <li class="avatar-item">
+        <button type="button" class="avatar" aria-pressed="true" aria-label="아바타 상태 토글: 온라인">
+          <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
+          <span class="avatar-state is-online"></span>
+          <span class="sr-only" aria-live="polite">온라인</span>
+        </button>
+      </li>
+      <script type="module" src="/src/ui/js/avatar-toggle.js"></script>
       <li class="avatar-item"></li>
       <li class="avatar-item"></li>
       <li class="avatar-item"></li>
@@ -31,7 +38,7 @@
     <h2>아바타 컴포넌트</h2>
     <h3>온라인 상태 - 버튼</h3>
     <div class="ui-component">
-      <button type="button" class="avatar" aria-label="온라인">
+      <button type="button" class="avatar" aria-label="아바타 상태 토글 : 온라인" aria-pressed="true">
         <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
         <span class="avatar-state is-online"></span>
       </button>
