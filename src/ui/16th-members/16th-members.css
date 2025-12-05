@@ -1,13 +1,13 @@
 /* 테이블 스타일링 */
 .members-wrapper {
-  background: var(--yellow);
   block-size: 500px;
   overflow: auto;
 }
 
 .members {
   inline-size: 100%;
-  border: 1px solid red;
+  /* 테이블 왼쪽과 오른쪽에만 테두리 선을 지정 */
+  border-inline: 1px solid var(--black);
   /* empty-cells: hide; */
 
   .number {
@@ -40,7 +40,8 @@
 
   th,
   td {
-    padding: 0.5em 1em;
+    padding: 1em;
     text-align: center;
+    white-space: nowrap;
   }
 }
