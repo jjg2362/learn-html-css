@@ -95,6 +95,15 @@
 
   /* svg 이미지 활용 */
   &.svg-icon {
+    &:has(:checked) .area,
+    &:has(:checked) .border {
+      fill: var(--primary-color);
+    }
+
+    &:has(:checked) .marker {
+      fill: var(--white);
+    }
+
     label {
       background: yellow;
       display: flex;
