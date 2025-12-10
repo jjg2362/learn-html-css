@@ -32,9 +32,9 @@
 
 /* 입력 서식 */
 .input {
-  background: yellow;
-  --size: 72px;
-  block-size: var(--size);
+  &:has(:user-invalid) .error-message {
+    visibility: visible;
+  }
 
   input {
     inline-size: 100%;
@@ -46,14 +46,12 @@
     &:read-only {
       background: var(--gray-100);
     }
-
-    &:user-invalid + .error-message {
-      display: block;
-    }
   }
 
   .error-message {
-    background: pink;
-    display: none;
+    visibility: hidden;
+    margin-block-start: 0.5em;
+    font-size: 0.75rem;
+    color: var(--red-100);
   }
 }
