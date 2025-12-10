@@ -77,6 +77,33 @@
   }
 }
 
+/* 체크박스 */
+.checkbox {
+  position: relative;
+
+  input {
+    position: absolute;
+    inline-size: 24px;
+    block-size: 24px;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    appearance: none;
+  }
+
+  label {
+    display: block;
+    align-content: center;
+    block-size: 24px;
+    background: url(/src/assets/naver/unchecked.svg) no-repeat;
+    padding-inline-start: 32px;
+  }
+
+  input:checked + label {
+    background-image: url(/src/assets/naver/checked.svg);
+  }
+}
+
 /* visibility 속성 */
 .like {
   background: yellow;
