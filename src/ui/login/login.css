@@ -55,3 +55,36 @@
     color: var(--red-100);
   }
 }
+
+/* 버튼 컴포넌트 */
+.button {
+  border: 0;
+  padding: 1em;
+
+  &.button-fill {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+
+  &:disabled {
+    background: var(--gray-200);
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus,
+  &:not(:disabled):active {
+    background: var(--green-300);
+  }
+}
+
+/* visibility 속성 */
+.like {
+  background: yellow;
+  padding: 10px;
+
+  .lion {
+    background: pink;
+    padding-block: 10px;
+    visibility: hidden;
+  }
+}
