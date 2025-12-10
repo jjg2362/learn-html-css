@@ -136,9 +136,24 @@
 
 /* 스위치 */
 .switch {
-  background: pink;
+  position: relative;
+
+  input {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: 2em;
+    block-size: 24px;
+    appearance: none;
+  }
 
   label {
+    display: block;
+    inline-size: 2em;
+    block-size: 24px;
+    align-content: center;
+
     &::after {
       content: 'OFF';
     }
