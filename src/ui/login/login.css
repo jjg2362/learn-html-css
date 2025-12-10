@@ -166,6 +166,25 @@
   }
 }
 
+/* 네이버 로그인 레이아웃 */
+/* 헤더 */
+.header {
+  padding-block: 70px 45px;
+
+  @media (width>= 768px) {
+    padding-block: 100px 50px;
+  }
+
+  /* 로고 */
+  .logo {
+    margin-inline: auto;
+  }
+}
+
+.main {
+  background: pink;
+}
+
 /* visibility 속성 */
 .like {
   background: yellow;
