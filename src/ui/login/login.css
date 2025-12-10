@@ -134,6 +134,23 @@
   font-weight: 700;
 }
 
+/* 스위치 */
+.switch {
+  background: pink;
+
+  label {
+    &::after {
+      content: 'OFF';
+    }
+  }
+
+  input:checked + label {
+    &::after {
+      content: 'ON';
+    }
+  }
+}
+
 /* visibility 속성 */
 .like {
   background: yellow;
