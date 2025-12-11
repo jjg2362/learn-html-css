@@ -1,0 +1,33 @@
+/* 다단 레이아웃 */
+
+/* 단축속성 */
+.euid {
+  column-gap: 40px;
+  background-color: skyblue;
+  columns: 200px 3;
+  /* column-rule-width: 4px;
+  column-rule-style: double;
+  column-rule-color: red; */
+  column-rule: 10px double red;
+  column-fill: balance;
+
+  h2 {
+    background-color: teal;
+    color: white;
+    column-span: all;
+    padding: 10px;
+  }
+}
+
+.lion {
+  column-fill: balance;
+  background-color: pink;
+  column-count: 3;
+}
+
+.like {
+  column-fill: auto;
+  background-color: yellow;
+  column-width: 200px;
+  block-size: 150px;
+}
