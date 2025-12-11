@@ -1,1 +1,28 @@
 /* Gird 레이아웃 */
+/* 그리드 셀 배경 색상 */
+.like,
+.lion,
+.euid,
+.frontend {
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--blue);
+  }
+  > div:nth-child(3) {
+    background: var(--coral);
+  }
+  > div:nth-child(4) {
+    background: var(--green);
+  }
+  > div:nth-child(5) {
+    background: var(--purple);
+  }
+  > div:nth-child(6) {
+    background: var(--gray);
+  }
+  > div:nth-child(7) {
+    background: var(--apricot);
+  }
+}
