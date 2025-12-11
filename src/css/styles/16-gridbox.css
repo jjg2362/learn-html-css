@@ -4,6 +4,8 @@
 .lion,
 .euid,
 .frontend {
+  box-shadow: 0 0 0 1px #000;
+
   > div:nth-child(1) {
     background: var(--pink);
   }
@@ -29,11 +31,114 @@
 
 /* 그리드 템플릿 설정 */
 .like {
-  border: 1px solid #000;
   display: grid;
   /* grid-template: repeat(5, 50px) / repeat(5, 100px); */
   grid-template-rows: repeat(5, 50px);
   grid-template-columns: repeat(5, 100px);
 }
 
-/* 그리드 아이템 배치 */
+/* 그리드 아이템 배치 - 라인 기반 */
+.lion {
+  display: grid;
+  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(5, 100px);
+
+  .lion1 {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    grid-row-end: 5;
+    grid-column-end: 5;
+  }
+
+  .lion2 {
+    grid-row: 3 / 5;
+    grid-column: 2 / 4;
+    z-index: 1;
+  }
+
+  .lion3 {
+    grid-area: 2 / 4 / 4 / 6;
+  }
+
+  .lion4 {
+    grid-area: 2 / 1 / 6 / 3;
+  }
+}
+
+/* 그리드 아이템 배치 - 이름 기반 */
+.euid {
+  display: grid;
+  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(5, 100px);
+  grid-template-areas:
+    'euid1 euid1 euid3 euid3 euid2'
+    'euid1 euid1 euid3 euid3 euid2'
+    'euid1 euid1 euid3 euid3 euid2'
+    'euid4 euid4 euid5 euid5 euid5'
+    'euid6 euid6 euid6 euid7 euid7';
+
+  .euid1 {
+    grid-area: euid1;
+  }
+  .euid2 {
+    grid-area: euid2;
+  }
+  .euid3 {
+    grid-area: euid3;
+  }
+  .euid4 {
+    grid-area: euid4;
+  }
+  .euid5 {
+    grid-area: euid5;
+  }
+  .euid6 {
+    grid-area: euid6;
+  }
+  .euid7 {
+    grid-area: euid7;
+  }
+}
+
+/* 그리드 아이템 정렬 */
+/* fr단위 */
+/* gap */
+.frontend {
+  inline-size: 500px;
+  block-size: 300px;
+
+  display: grid;
+  grid-auto-rows: 40px;
+  /* grid-auto-columns: 1fr;  */
+  /* grid-template-columns: 2fr repeat(3, 1fr); 첫번째 컬럼 2fr, 3개의 컬럼 1fr */
+  /* grid-template-columns: 2fr repeat(3, 1fr) 3fr; */
+  /* gap: 10px; fr시 gap을 빼고 크기를 결정 */
+
+  /* grid에서 백분율을 쓰는 이유 */
+  /* grid-template-columns: 20% 30% 10% 15% 25%;
+  gap: 10px; */
+
+  grid-template-columns: 50px 100px 80px 120px 50px;
+  gap: 10px;
+
+  /* 컨텐츠 정렬 */
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* place-content: start center; */
+
+  /* 아이템 정렬 */
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* place-items: center; */
+
+  /* 영역을 가득 채움 */
+  > div {
+    /* text-align: center; */
+    /* align-content: center; */
+  }
+
+  .frontend4 {
+    /* justify-self: end; */
+    /* place-self: end; */
+  }
+}
